@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQs — IHA Online Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <a href="index.html" class="brand">
+    <img src="assets/images/logo.jpeg" alt="IHA Online Shop logo">
+    <div>
+      <h1>IHA Online Shop</h1>
+      <span>SEE · SHOP · SHARE</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li id="navAllProducts"><a href="shop.html">All Products</a></li>
+    <li><a href="track-order.html">Track Order</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="cart.html" class="cart-btn">Cart <span class="cart-count" id="cartCount">0</span></a>
+  </div>
+</div>
+
+<div class="content-page">
+  <div class="breadcrumb"><a href="index.html">Home</a> / FAQs</div>
+  <h2 class="display">Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-question"><span>How do I track my order?</span><span class="plus">+</span></div>
+    <div class="faq-answer">Go to the <a href="track-order.html">Track Order</a> page and enter the order ID you received at checkout (looks like IHA-4F2A1B).</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question"><span>What payment methods do you accept?</span><span class="plus">+</span></div>
+    <div class="faq-answer">Right now orders are confirmed and arranged directly — see the payment details in your order confirmation, or contact us if you're unsure.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question"><span>Can I change or cancel my order?</span><span class="plus">+</span></div>
+    <div class="faq-answer">Contact us as soon as possible with your order ID. We can usually make changes if the order hasn't shipped yet — see our <a href="help/return-policy.html">Return Policy</a> for details.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question"><span>Do you ship internationally?</span><span class="plus">+</span></div>
+    <div class="faq-answer">See our <a href="help/shipping-policy.html">Shipping Policy</a> for current coverage and delivery times.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question"><span>An item arrived damaged — what do I do?</span><span class="plus">+</span></div>
+    <div class="faq-answer">We're sorry! Reach out via the <a href="contact.html">Contact page</a> with your order ID and a photo, and we'll sort out a replacement or refund per our <a href="help/return-policy.html">Return Policy</a>.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question"><span>Do products come with a warranty?</span><span class="plus">+</span></div>
+    <div class="faq-answer">Gadgets and jewelry are covered under our <a href="help/warranty.html">Warranty</a> terms. Other categories are covered by our standard return policy.</div>
+  </div>
+</div>
+
+<div class="footer">
+  © 2026 IHA Online Shop · All rights reserved
+  <div class="footer-links">
+    <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="faqs.html">FAQs</a> · <a href="help-center.html">Help Center</a><span id="adminFooterLink"></span>
+  </div>
+</div>
+
+<script src="assets/js/cart.js"></script>
+<script>
+document.querySelectorAll(".faq-question").forEach(q=>{
+  q.addEventListener("click", ()=>{
+    q.parentElement.classList.toggle("open");
+  });
+});
+</script>
+</body>
+</html>

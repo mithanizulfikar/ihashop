@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IHA Online Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <a href="index.html" class="brand">
+    <img src="assets/images/logo.jpeg" alt="IHA Online Shop logo">
+    <div>
+      <h1>IHA Online Shop</h1>
+      <span>SEE · SHOP · SHARE</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li id="navAllProducts"><a href="shop.html">All Products</a></li>
+    <li><a href="track-order.html">Track Order</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="cart.html" class="cart-btn">Cart <span class="cart-count" id="cartCount">0</span></a>
+  </div>
+</div>
+
+<div class="hero home-hero">
+  <div class="home-hero-grid">
+    <div class="home-hero-left">
+      <div class="tagline">EST. IHA</div>
+      <h2 class="display">Little finds,<br>big charm.</h2>
+      <p class="sub" style="margin-left:0;margin-right:0;">Curated Collections of Fine Jewelry, Tech Gadgets & Household, Statement Handbags, Exquisite Pakistani Dresses, Elegant Footwear, and Signature Perfumes.</p>
+      <div class="home-hero-ctas">
+        <a href="shop.html" class="btn-gold-pill">Shop Now <span>&rsaquo;</span></a>
+        <a href="#categories" class="btn-outline-pill">Browse Categories</a>
+      </div>
+    </div>
+    <div class="home-hero-right">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide active" data-cat="Handbags" style="background:#EFE1D2;">
+<img src="assets/images/handbag.png" alt="Handbag" class="banner-img">          
+<div class="hero-slide-text">
+            <span class="hero-slide-tag">HANDBAGS</span>
+            <h3>Elevate Your Style</h3>
+            <a href="category.html?cat=Handbags" class="btn-gold-pill">Shop Now <span>&rsaquo;</span></a>
+          </div>
+        </div>
+        <div class="hero-slide" data-cat="Perfume" style="background:#E9D4CE;">
+          <img src="assets/images/perfume.png" alt="Perfume" class="banner-img">
+
+        <div class="hero-slide-text">
+            <span class="hero-slide-tag">PERFUME</span>
+            <h3>Scents of Charm</h3>
+            <a href="category.html?cat=Perfume" class="btn-gold-pill">Shop Now <span>&rsaquo;</span></a>
+          </div>
+        </div>
+        <div class="hero-slide" data-cat="Dresses" style="background:#EDE6D8;">
+          <img src="assets/images/slides/dress.png" alt="Dress" class="banner-img">
+
+          <div class="hero-slide-text">
+            <span class="hero-slide-tag">LADIES DRESSES</span>
+            <h3>Dress to Impress</h3>
+            <a href="category.html?cat=Dresses" class="btn-gold-pill">Shop Now <span>&rsaquo;</span></a>
+          </div>
+        </div>
+        <div class="hero-slide" data-cat="Shoes" style="background:#E7DCCB;">
+         <img src="assets/images/slipper.png" alt="Slipper" class="banner-img">
+
+          <div class="hero-slide-text">
+            <span class="hero-slide-tag">SLIPPERS &amp; SHOES</span>
+            <h3>Walk with Grace</h3>
+            <a href="category.html?cat=Shoes" class="btn-gold-pill">Shop Now <span>&rsaquo;</span></a>
+          </div>
+        </div>
+        <div class="hero-slide" data-cat="Jewelry" style="background:#EFE4D2;">
+          <img src="assets/images/jewel.png" alt="Jewelry" class="banner-img">
+
+          <div class="hero-slide-text">
+            <span class="hero-slide-tag">JEWELRY</span>
+            <h3>Timeless Elegance</h3>
+            <a href="category.html?cat=Jewelry" class="btn-gold-pill">Shop Now <span>&rsaquo;</span></a>
+          </div>
+        </div>
+        <div class="hero-slide" data-cat="Gadgets" style="background:#E4E1D6;">
+          <img src="assets/images/gadgets.png" alt="Handbag" class="banner-img">
+	<div class="hero-slide-text">
+            <span class="hero-slide-tag">GADGET	</span>
+            <h3>Innovative Technology</h3>
+            <a href="category.html?cat=Gadgets" class="btn-gold-pill">Shop Now <span>&rsaquo;</span></a>
+          </div>
+        </div>
+
+        <button class="slider-arrow slider-prev" id="sliderPrev" aria-label="Previous slide">&lsaquo;</button>
+        <button class="slider-arrow slider-next" id="sliderNext" aria-label="Next slide">&rsaquo;</button>
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trust-strip">
+  <div class="trust-item"><span class="trust-icon">🚚</span> Fast &amp; Reliable Delivery</div>
+  <div class="trust-item"><span class="trust-icon">🔒</span> Secure Payment</div>
+  <div class="trust-item"><span class="trust-icon">💬</span> 24/7 WhatsApp Support</div>
+</div>
+
+<div class="products" id="categories">
+  <h2>Shop Categories</h2>
+  <div class="product-grid" id="categoryCardGrid">
+    <div class="product-card">
+      <img src="assets/images/jewelry-hero.jpg" alt="Jewelry">
+      <div class="product-body">
+        <h3>Jewelry</h3>
+        <a href="category.html?cat=Jewelry" class="primary-btn full-width" style="display:block;text-align:center;text-decoration:none;">View More</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="assets/images/products/jars.svg" alt="Household">
+      <div class="product-body">
+        <h3>Household</h3>
+        <a href="category.html?cat=Household" class="primary-btn full-width" style="display:block;text-align:center;text-decoration:none;">View More</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="assets/images/products/tech.jpg" alt="Gadgets">
+      <div class="product-body">
+        <h3>Gadgets</h3>
+        <a href="category.html?cat=Gadgets" class="primary-btn full-width" style="display:block;text-align:center;text-decoration:none;">View More</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="assets/images/dress-hero.png" alt="Dresses">
+      <div class="product-body">
+        <h3>Dresses</h3>
+        <a href="category.html?cat=Dresses" class="primary-btn full-width" style="display:block;text-align:center;text-decoration:none;">View More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="products">
+  <h2>Featured Products</h2>
+  <p class="section-sub" id="featuredCount"></p>
+  <div class="product-grid" id="featuredGrid"></div>
+</div>
+
+<div class="footer">
+  © 2026 IHA Online Shop · All rights reserved
+  <div class="footer-links">
+    <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="faqs.html">FAQs</a> · <a href="help-center.html">Help Center</a><span id="adminFooterLink"></span>
+  </div>
+</div>
+
+<div class="welcome-overlay" id="welcomeOverlay">
+  <div class="welcome-modal">
+    <button class="welcome-close" id="welcomeCloseBtn">✕</button>
+    <img src="assets/images/mix.png" alt="Welcome to IHA Online Shop">
+    <div class="welcome-modal-body">
+      <div class="tagline">SEE · SHOP · SHARE</div>
+      <h2 class="display">The IHA Team Welcomes You 🎉</h2>
+      <p>So glad you're here! Explore fine jewelry, cozy household finds, handy gadgets,Household and sweet little dresses — all picked with care, just for you.</p>
+      <button class="primary-btn full-width" id="welcomeStartBtn">Start Shopping</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/shop.js"></script>
+<script>
+(function(){
+  const overlay = document.getElementById("welcomeOverlay");
+  const SEEN_KEY = "iha_welcome_seen";
+  if(!sessionStorage.getItem(SEEN_KEY)){
+    setTimeout(()=>{ overlay.classList.add("show"); }, 400);
+  }
+  function dismiss(){
+    overlay.classList.remove("show");
+    sessionStorage.setItem(SEEN_KEY, "1");
+  }
+  document.getElementById("welcomeCloseBtn").addEventListener("click", dismiss);
+  document.getElementById("welcomeStartBtn").addEventListener("click", dismiss);
+  overlay.addEventListener("click", (e)=>{ if(e.target === overlay) dismiss(); });
+})();
+
+async function loadFeaturedProducts(){
+  const grid = document.getElementById("featuredGrid");
+  grid.innerHTML = `<div class="empty-note">Loading products…</div>`;
+  try{
+    const res = await fetch("api/get_products.php?sort=newest&limit=8");
+    const products = await res.json();
+    renderProductGrid(products, "featuredGrid");
+    document.getElementById("featuredCount").textContent = "A quick taste of what's in the shop — add anything straight to your cart.";
+  }catch(e){
+    grid.innerHTML = `<div class="empty-note">Couldn't load products. Check that api/config.php has the correct database details.</div>`;
+  }
+}
+loadFeaturedProducts();
+
+async function loadExtraCategoryCards(){
+  const CURATED = ["Jewelry", "Household", "Gadgets", "Dresses"];
+  try{
+    const res = await fetch("api/get_categories.php");
+    const categories = await res.json();
+    const extra = categories.filter(c => !CURATED.includes(c));
+    if(extra.length === 0) return;
+
+    const grid = document.getElementById("categoryCardGrid");
+    const html = extra.map(c => `
+      <div class="product-card">
+        <img src="https://picsum.photos/seed/${encodeURIComponent(c)}/400/400" alt="${escapeHtml(c)}">
+        <div class="product-body">
+          <h3>${escapeHtml(c)}</h3>
+          <a href="category.html?cat=${encodeURIComponent(c)}" class="primary-btn full-width" style="display:block;text-align:center;text-decoration:none;">View More</a>
+        </div>
+      </div>`).join("");
+    grid.insertAdjacentHTML("beforeend", html);
+  }catch(e){
+    // fails quietly — the 4 curated cards still show either way
+  }
+}
+loadExtraCategoryCards();
+
+/* ---------- Hero category slider ---------- */
+(function(){
+  const slider = document.getElementById("heroSlider");
+  if(!slider) return;
+  const slides = Array.from(slider.querySelectorAll(".hero-slide"));
+  const dotsContainer = document.getElementById("sliderDots");
+  const prevBtn = document.getElementById("sliderPrev");
+  const nextBtn = document.getElementById("sliderNext");
+  let current = 0;
+  let timer = null;
+  const AUTO_ADVANCE_MS = 4500;
+
+  // Build one dot per slide
+  slides.forEach((_, i)=>{
+    const dot = document.createElement("button");
+    dot.className = "slider-dot" + (i === 0 ? " active" : "");
+    dot.setAttribute("aria-label", "Go to slide " + (i+1));
+    dot.addEventListener("click", ()=> goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+  const dots = Array.from(dotsContainer.querySelectorAll(".slider-dot"));
+
+  function goToSlide(index){
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+  }
+  function nextSlide(){ goToSlide(current + 1); }
+  function prevSlide(){ goToSlide(current - 1); }
+
+  function startAutoAdvance(){
+    stopAutoAdvance();
+    timer = setInterval(nextSlide, AUTO_ADVANCE_MS);
+  }
+  function stopAutoAdvance(){
+    if(timer) clearInterval(timer);
+  }
+
+  nextBtn.addEventListener("click", ()=>{ nextSlide(); startAutoAdvance(); });
+  prevBtn.addEventListener("click", ()=>{ prevSlide(); startAutoAdvance(); });
+
+  // Pause on hover (mouse over), resume when the mouse leaves
+  slider.addEventListener("mouseenter", stopAutoAdvance);
+  slider.addEventListener("mouseleave", startAutoAdvance);
+
+  startAutoAdvance();
+})();
+</script>
+</body>
+</html>

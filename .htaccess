@@ -1,0 +1,26 @@
+# =======================================================
+# IHA ONLINE SHOP — ROOT SECURITY RULES
+# =======================================================
+
+# Never let visitors browse folder contents directly
+Options -Indexes
+
+# Block access to sensitive file types anywhere on the site
+<FilesMatch "\.(sql|log|env|bak|ini|sh|md)$">
+  Require all denied
+</FilesMatch>
+
+# Security headers on every page
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "DENY"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ---------- Force HTTPS ----------
+# Uncomment the 3 lines below once your SSL certificate is active
+# (most hosts offer free SSL in cPanel/Hostinger — turn it on first).
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
