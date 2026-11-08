@@ -1,0 +1,4 @@
+# Images should never execute as code, even if a stray .php ends up here
+<FilesMatch "\.(php|phtml|php\d)$">
+  Require all denied
+</FilesMatch>
