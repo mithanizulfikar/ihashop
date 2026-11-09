@@ -1,0 +1,15 @@
+# Prevent the schema/migration files from ever being served directly
+<FilesMatch "\.sql$">
+  Require all denied
+</FilesMatch>
+
+# Never let visitors browse this folder's contents
+Options -Indexes
+
+# config.php holds DB + payment credentials — belt-and-suspenders in case
+# PHP ever isn't executed on this server for some reason
+<Files "config.php">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-store"
+  </IfModule>
+</Files>
